@@ -1,6 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --main-bg: #60a9ff;
+    --main-text-header: #888;
+    --main-text-features: #016ff9;
+    --main-border: #e1f1ff;
+    --main-btn: #9dd1ff;
+    --main-btn-text: #348efe;
+    --extra-btn: #48aaff;
+    --extra-btn-change: #269aff;
+    --simple-white: white;
 }
 
 html {
@@ -10,7 +24,7 @@ html {
 }
 
 body {
-    background-color: #60a9ff;
+    background-color: var(--main-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,11 +32,83 @@ body {
 }
 
 .panel {
-    background-color: white;
-    /* display: flex; */
-    /* flex-direction: row; */
+    background-color: var(--simple-white);
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    padding: 25px;
+    padding: 15px 25px;
     width: 100%;
     max-width: 960px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: solid 1px var(--main-border);
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.pricing-header {
+    margin: 1 1 1 1;
+    color: var(--main-text-header);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.pricing-features {
+    color: var(--main-text-features);
+    margin: 50px 25px;
+}
+
+.pricing-features-item {
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 1.5;
+    border-top: solid 1px var(--main-border);
+    padding: 15px 0;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: solid 1px var(--main-border);
+}
+
+.pricing-price {
+    font-size: 32px;
+    color: var(--main-text-features);
+    display: block;
+    font-weight: 700;
+}
+
+.pricing-button {
+    border: solid 1px var(--main-btn);
+    border-radius: 10px;
+    color: var(--main-btn-text);
+    padding: 15px 35px;
+    display: inline-block;
+    margin: 25px 0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.pricing-button.is-featured {
+    background-color: var(--extra-btn);
+    color: var(--simple-white);
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: var(--main-border);
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+    background-color: var(--extra-btn-change);
 }
