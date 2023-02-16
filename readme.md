@@ -1,1 +1,1 @@
-### im learning git 
+### simple price list with flexbox
