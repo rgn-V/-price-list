@@ -112,3 +112,19 @@ body {
 .pricing-button.is-featured:focus {
     background-color: var(--extra-btn-change);
 }
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+
+    .pricing-plan {
+        border: none;
+        padding: 25px 50px;
+    }
+
+    .pricing-plan:nth-child(2) {
+        border-right: solid 1px var(--main-border);
+        border-left: solid 1px var(--main-border);
+    }
+}
