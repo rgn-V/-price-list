@@ -1,1 +1,1 @@
-### simple prive list with flexbox
+### simple price list with flexbox
